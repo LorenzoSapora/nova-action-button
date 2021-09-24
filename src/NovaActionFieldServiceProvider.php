@@ -1,18 +1,13 @@
 <?php
 
-namespace Lorenzosananopora\NovaActionButton;
+namespace LorenzoSapora\NovaActionButton;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
 
-class FieldServiceProvider extends ServiceProvider
+class NovaActionFieldServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
@@ -21,11 +16,6 @@ class FieldServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
         //
