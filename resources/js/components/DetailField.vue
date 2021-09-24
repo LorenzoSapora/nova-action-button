@@ -3,7 +3,7 @@
         <template v-slot:value>
             <button
                 class="btn btn-default btn-primary"
-                @click="confirmActionModalOpened = true"
+                @click="handleClick"
                 :disabled="field.readonly"
             >
                 {{ buttonText }}
@@ -64,6 +64,14 @@ export default {
         closeConfirmationModal() {
             this.confirmActionModalOpened = false
             this.errors = new Errors()
+        },
+
+        handleClick() {
+          if(this.withoutConfirmation) {
+            this.executeAction();
+          } else {
+            this.openConfirmationModal();
+          }
         },
 
         executeAction() {
@@ -162,7 +170,12 @@ export default {
 
         buttonText() {
             return this.field.text || this.__('Run');
+        },
+
+        withoutConfirmation() {
+            return this.field.withoutConfirmation || false;
         }
     }
+
 }
 </script>
