@@ -47,4 +47,9 @@ class NovaActionButton extends Field
     {
         return $this->withMeta(compact('loadingColor'));
     }
+
+    public function withoutConfirmation()
+    {
+        return $this->withMeta(['withoutConfirmation' => true]);
+    }
 }
