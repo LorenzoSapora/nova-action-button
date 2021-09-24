@@ -9,6 +9,11 @@
     "require": {
         "php": ">=7.1.0"
     },
+    "authors": [
+        {
+            "name": "Lorenzo Sapora",
+            "email": "lorenzo.sapora@gmail.com"
+        }
     ],
     "autoload": {
         "psr-4": {
