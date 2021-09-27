@@ -5,6 +5,7 @@
                 class="btn btn-default btn-primary"
                 @click="handleClick"
                 :disabled="field.readonly"
+                :style="`background-color: ${field.buttonColor}`"
             >
                 {{ buttonText }}
             </button>
