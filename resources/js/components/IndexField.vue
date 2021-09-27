@@ -5,6 +5,7 @@
       :class="{ hidden: hidden }"
       @click="handleClick"
       :disabled="disabled"
+      :style="`background-color: ${field.buttonColor}`"
     >
       <loading v-if="showLoading" :color="field.loadingColor" />
       <span v-else>{{ buttonText }}</span>
